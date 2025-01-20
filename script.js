@@ -1,13 +1,8 @@
-// Referência ao botão e contêiner
-const botaoAdicionar = document.getElementById("botaoAdicionar");
-const conteiner = document.getElementById("conteiner");
+// Referência ao botão e parágrafo
+const botaoRemover = document.getElementById("botaoRemover");
+const paragrafo = document.getElementById("paragrafo");
 
 // Adicionar evento ao botão
-botaoAdicionar.addEventListener("click", function() {
-    // Criar novo elemento
-    const novoParagrafo = document.createElement("p");
-    novoParagrafo.textContent = "Parágrafo adicionado dinamicamente!";
-
-    // Adicionar o parágrafo ao contêiner
-    conteiner.appendChild(novoParagrafo);
+botaoRemover.addEventListener("click", function() {
+    paragrafo.remove(); // Remove o elemento diretamente
 });
