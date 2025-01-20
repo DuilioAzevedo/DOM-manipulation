@@ -1,12 +1,13 @@
-// Alterar texto do título
-const titulo = document.getElementById("titulo");
-titulo.textContent = "Título Atualizado com JavaScript";
+// Referência ao botão e contêiner
+const botaoAdicionar = document.getElementById("botaoAdicionar");
+const conteiner = document.getElementById("conteiner");
 
 // Adicionar evento ao botão
-const botao = document.getElementById("meuBotao");
-botao.addEventListener("click", function() {
-    const caixa = document.getElementById("caixa");
-    caixa.textContent = "Você clicou no botão!";
-    caixa.style.backgroundColor = "lightblue";
-    caixa.style.color = "darkblue";
+botaoAdicionar.addEventListener("click", function() {
+    // Criar novo elemento
+    const novoParagrafo = document.createElement("p");
+    novoParagrafo.textContent = "Parágrafo adicionado dinamicamente!";
+
+    // Adicionar o parágrafo ao contêiner
+    conteiner.appendChild(novoParagrafo);
 });
