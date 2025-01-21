@@ -1,11 +1,14 @@
-// Referência ao contêiner e botão
-const conteiner = document.getElementById("conteiner");
-const botaoInfo = document.getElementById("botaoInfo");
+// Referência aos botões
+const adItem = document.getElementById("adItem");
+const remItem = document.getElementById("remItem");
+const lista = document.getElementById("lista");
 
 // Adicionar evento ao botão
-botaoInfo.addEventListener("click", function() {
-    console.log("Pai do contêiner:", conteiner.parentNode.nodeName);
-    console.log("Filhos do contêiner:", conteiner.children);
-    console.log("Primeiro filho:", conteiner.firstElementChild.textContent);
-    console.log("Último filho:", conteiner.lastElementChild.textContent);
+adItem.addEventListener("click", function() {
+    // Criar novo elemento
+    const novoitem = document.createElement("li");
+    novoitem.textContent = "Item";
+
+    // Adicionar o parágrafo ao contêiner
+    lista.appendChild(novoitem);
 });
