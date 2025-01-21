@@ -12,3 +12,10 @@ adItem.addEventListener("click", function() {
     // Adicionar o parágrafo ao contêiner
     lista.appendChild(novoitem);
 });
+
+// Adicionar evento ao botão
+remItem.addEventListener("click", function() {
+    // Remover elemento
+    lista.removeChild(lista.lastElementChild);
+    
+});
